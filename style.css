@@ -1,27 +1,51 @@
-* {
+
+/* Fundo estrelado */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    background: #000;
+    color: #f0f0f0;
+    overflow-x: hidden;
+    position: relative;
+    text-align: center;
+    min-height: 100vh;
   }
   
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
+  .stars, .stars2, .stars3 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent url('https://raw.githubusercontent.com/kodingdotninja/codepen-assets/main/starfield.png') repeat;
+    z-index: 0;
+    animation: moveStars 100s linear infinite;
+    opacity: 0.3;
+  }
+  
+  .stars2 {
+    animation: moveStars 200s linear infinite;
+    opacity: 0.2;
+  }
+  
+  .stars3 {
+    animation: moveStars 300s linear infinite;
+    opacity: 0.1;
+  }
+  
+  @keyframes moveStars {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 10000px; }
   }
   
   .container {
+    position: relative;
+    z-index: 1;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
-    padding: 20px;
-    max-width: 600px;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
   }
   
   .container.show {
@@ -31,8 +55,6 @@
   
   h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #ffffff;
   }
   
   .highlight {
@@ -41,8 +63,8 @@
   
   .bio {
     font-size: 1.2rem;
+    color: #ccc;
     margin-bottom: 30px;
-    color: #cccccc;
   }
   
   .social-links a {
@@ -57,9 +79,72 @@
     color: #66e0ff;
   }
   
+  /* Projetos */
+  .projects {
+    margin-top: 60px;
+  }
+  
+  .projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    transition: transform 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card h3 {
+    margin-bottom: 10px;
+    color: #00d2ff;
+  }
+  
+  .project-card a {
+    color: #66e0ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
   footer {
-    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
     font-size: 0.9rem;
-    color: #666;
+    color: #888;
+  }
+  .profile-access {
+    margin-top: 20px;
+  }
+  
+  .profile-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #00d2ff;
+    color: #000;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 210, 255, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .profile-button:hover {
+    background-color: #7eb2be;
+    transform: translateY(-2px);
   }
   
