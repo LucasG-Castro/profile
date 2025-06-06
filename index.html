@@ -3,55 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucas | Desenvolvedor Web</title>
-  <meta name="description" content="Página pessoal de Lucas, desenvolvedor web apaixonado por tecnologia e open source.">
-  <meta name="author" content="LucasG-Castro" />
-  <meta name="theme-color" content="#000000" />
-  <link rel="icon" href="favicon.png" />
+  <title>Lucas G. Castro - Página Inicial</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="stars"></div>
-  <div class="stars2"></div>
-  <div class="stars3"></div>
+  <canvas id="bg"></canvas>
 
-  <main class="container fade-in">
-    <h1>Olá, eu sou <span class="highlight">Lucas</span> 👋</h1>
-    <p class="bio">Desenvolvedor apaixonado por tecnologia, web e open source.</p>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#materias">Matérias</a></li>
+    </ul>
+  </nav>
 
-    <nav class="social-links" aria-label="Redes Sociais">
-      <a href="https:https://github.com/LucasG-Castro" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="mailto:lucas.8360869@aluno.mg.gov.br">Email</a>
-      <div class="profile-access">
-        <a href="https://github.com/LucasG-Castro" target="_blank" rel="noopener noreferrer" class="profile-button">
-          Acessar Perfil Completo
-        </a>
-      </div>
-    </nav>
+  <div class="content">
+    <header>
+      <h1>Lucas G. Castro</h1>
+      <p>Desenvolvedor apaixonado por tecnologia, código limpo e soluções criativas.</p>
+    </header>
 
-    <section class="projects">
-      <h2>Meus Projetos</h2>
-      <div class="project-list">
-        <div class="project-card">
-          <h3>Projeto 1</h3>
-          <p>Descrição breve do projeto 1.</p>
-          <a href="#">Ver no GitHub</a>
-        </div>
-        <div class="project-card">
-          <h3>Projeto 2</h3>
-          <p>Descrição breve do projeto 2.</p>
-          <a href="#">Ver no GitHub</a>
-        </div>
-        <!-- Adicione mais projetos aqui -->
-      </div>
-    </section>
-  </main>
+    <main>
+      <section id="sobre" class="section">
+        <h2>Sobre Mim</h2>
+        <p>Sou um desenvolvedor focado em aprender e construir projetos úteis, usando as melhores práticas e tecnologias modernas.</p>
+      </section>
+      <section id="materias" class="section">
+        <h2>Matérias que estou aprendendo</h2>
+        <ul class="materias-lista">
+          <li>
+            <!-- Ícone HTML5 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" fill="#E44D26" style="margin-right:8px;">
+              <path d="M71 460L30 0h451l-41 460-184 52"/>
+              <path fill="#F16529" d="M256 472l149-41 35-393H256"/>
+              <path fill="#EBEBEB" d="M256 208h74l5-58H256V103h142l-14 157-127 35v-87z"/>
+              <path fill="#fff" d="M256 318l-64-17-4-44h42v-35H147l8 90 101 28 98-27 7-83h-44v36h32l-6 58-90 25z"/>
+            </svg>
+            <span>HTML</span>
+          </li>
+          <li>
+            <!-- Ícone CSS3 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" fill="#1572B6" style="margin-right:8px;">
+              <path d="M71 460L30 0h451l-41 460-184 52"/>
+              <path fill="#33A9DC" d="M256 472l149-41 35-393H256"/>
+              <path fill="#fff" d="M256 208h74l5-58H256V103h142l-14 157-127 35v-87z"/>
+              <path fill="#EBEBEB" d="M256 318l-64-17-4-44h42v-35H147l8 90 101 28 98-27 7-83h-44v36h32l-6 58-90 25z"/>
+            </svg>
+            <span>CSS</span>
+          </li>
+          <li>
+            <!-- Ícone JavaScript -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 630 630" fill="#F7DF1E" style="margin-right:8px;">
+              <rect width="630" height="630" rx="90" ry="90"/>
+              <path d="M423 492c0 43-25 62-62 62-33 0-52-17-62-37l33-20c6 11 12 20 24 20 12 0 19-5 19-24v-131h44v133zm-141 7c0 23-10 42-43 42-23 0-38-12-45-28l30-18c4 8 8 15 17 15 8 0 14-3 14-15v-132h44v132z"/>
+            </svg>
+            <span>JavaScript</span>
+          </li>
+        </ul>
+      </section>
+      
 
-  <footer>
-    <p>&copy; 2025 <a href="https://github.com/LucasG-Castro" target="_blank" rel="noopener noreferrer">LucasG-Castro</a></p>
-  </footer>
+      <section class="section">
+        <h2>Entre em contato ou veja mais</h2>
+        <a href="https://github.com/LucasG-Castro" target="_blank" class="github-button">GitHub</a>
+        <a href="mailto:lucas.8360869@aluno.mg.gov.br" class="email-button">E-mail</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 - Lucas G. Castro</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
